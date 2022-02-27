@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".add_items.AddInventoryFragment">
+    tools:context=".add_products.AddInventoryFragment">
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/close"
@@ -98,7 +98,7 @@
 
                     android:hint="@string/product_code"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -110,11 +110,12 @@
                     android:textStyle="bold" />
 
                 <Spinner
+                    android:id="@+id/spCategory"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
 
+                    android:layout_height="45dp"
                     android:background="@drawable/search_background"
-                    android:entries="@array/types"
+                    android:entries="@array/categories"
                     android:padding="10dp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -245,7 +246,7 @@
 
                     android:hint="@string/unit_cost"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -265,7 +266,7 @@
 
                     android:hint="@string/retail_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -284,7 +285,7 @@
                     android:background="@drawable/search_background"
                     android:hint="@string/agent_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -304,7 +305,7 @@
 
                     android:hint="@string/wholesale_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -314,25 +315,27 @@
                     android:layout_marginTop="12dp"
                     app:dividerColor="@color/search_bg_color" />
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="12dp"
-                   android:background="@drawable/search_background"
-                   android:orientation="horizontal"
-                   >
-                   <ImageView
-                       android:layout_width="80dp"
-                       android:layout_height="80dp"
-                       android:src="@drawable/ic_image"/>
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center"
-                       android:text="@string/add_product_image"
-                       android:textColor="@color/primaryColor"
-                       />
-               </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/imagePick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/search_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/productImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_image" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/add_product_image"
+                        android:textColor="@color/primaryColor" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
