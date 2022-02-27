@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/drawable/search_background.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/drawable/spinner_background.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/drawable/thumb.xml" value="0.1205" />
+        <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/drawable/track.xml" value="0.2065" />
         <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/layout/activity_main.xml" value="0.1872037914691943" />
         <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/layout/fragment_add_inventory.xml" value="0.11770833333333333" />
         <entry key="..\:/AndroidStudioProjects/IProcureTest/presentation/src/main/res/layout/fragment_all_inventories.xml" value="0.1" />

@@ -73,13 +73,13 @@
                 <EditText
                     android:id="@+id/etProductName"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
                     android:hint="@string/product_name"
                     android:imeOptions="actionNext"
                     android:inputType="textCapWords"
-                    android:paddingStart="6dp"
+                    android:paddingStart="8dp"
                     android:paddingEnd="6dp" />
 
                 <TextView
@@ -92,14 +92,14 @@
                 <EditText
                     android:id="@+id/etProductCode"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
                     android:hint="@string/product_code"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:paddingStart="6dp"
+                    android:paddingStart="8dp"
                     android:paddingEnd="6dp" />
 
                 <TextView
@@ -113,8 +113,8 @@
                     android:id="@+id/spCategory"
                     android:layout_width="match_parent"
 
-                    android:layout_height="45dp"
-                    android:background="@drawable/search_background"
+                    android:layout_height="50dp"
+                    android:background="@drawable/spinner_background"
                     android:entries="@array/categories"
                     android:padding="10dp" />
 
@@ -137,7 +137,7 @@
                     <EditText
                         android:id="@+id/etProductType"
                         android:layout_width="0dp"
-                        android:layout_height="45dp"
+                        android:layout_height="50dp"
                         android:layout_marginEnd="10dp"
                         android:autofillHints="no"
                         android:background="@drawable/search_background"
@@ -153,9 +153,10 @@
 
                     <Spinner
                         android:id="@+id/spProductType"
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
-                        android:background="@drawable/search_background"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/spinner_background"
+                        android:spinnerMode="dropdown"
                         android:entries="@array/types"
                         android:padding="10dp"
                         app:layout_constraintBottom_toBottomOf="@id/etProductType"
@@ -173,7 +174,7 @@
                 <EditText
                     android:id="@+id/etManufacturer"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
@@ -193,7 +194,7 @@
                 <EditText
                     android:id="@+id/etDistributor"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
@@ -221,8 +222,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.switchmaterial.SwitchMaterial
+                    <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/addVat"
+                        android:thumb="@drawable/thumb"
+                        app:track="@drawable/track"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -240,7 +243,7 @@
                 <EditText
                     android:id="@+id/etUnitCost"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
@@ -260,7 +263,7 @@
                 <EditText
                     android:id="@+id/etRetailPrice"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
@@ -280,7 +283,7 @@
                 <EditText
                     android:id="@+id/etAgentPrice"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
                     android:hint="@string/agent_price"
@@ -299,7 +302,7 @@
                 <EditText
                     android:id="@+id/etWholePrice"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="50dp"
                     android:autofillHints="no"
                     android:background="@drawable/search_background"
 
