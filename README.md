@@ -53,3 +53,9 @@ The data layer is responsibile for selecting the proper data source for the doma
 #### 3. Presentation
 The presentation layer contains components involved in rendering information to the user. The main part of this layer are the views(Fragment, Activities Composables) and viewModels.
 
+#### App Screenshots
+##### Add Product
+<img src="/art/add2.jpg" width="260">&emsp;<img src="/art/add1.jpg" width="260">
+
+##### Dashboars
+<img src="/art/dash.jpg" width="260">
