@@ -7,8 +7,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/productImage"
-        android:layout_width="60dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_image"
         app:layout_constraintStart_toStartOf="parent"

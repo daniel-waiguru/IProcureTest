@@ -1,6 +1,5 @@
 package com.danielwaiguru.presentation.adapters
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.danielwaiguru.domain.models.ProductUiModel
 import com.danielwaiguru.presentation.databinding.ProductItemBinding
+import com.danielwaiguru.presentation.utils.ImageUtils
 
 class ProductsAdapter: ListAdapter<ProductUiModel, ProductsAdapter.ProductsViewHolder>(COMPARATOR) {
     private object COMPARATOR: DiffUtil.ItemCallback<ProductUiModel>() {
@@ -41,7 +41,10 @@ class ProductsAdapter: ListAdapter<ProductUiModel, ProductsAdapter.ProductsViewH
                     manufacturer.text = product.manufacturer
                     unitCost.text = product.code
                     distributor.text = product.distributor
-                    productImage.setImageURI(Uri.parse(product.image))
+                    val bitmap = ImageUtils.stringToBitmap(product.image)
+                    if (bitmap != null) {
+                        productImage.setImageBitmap(bitmap)
+                    }
                 }
             }
     }

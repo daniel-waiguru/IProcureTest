@@ -1,5 +1,6 @@
 package com.danielwaiguru.presentation.add_products
 
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.danielwaiguru.domain.models.Product
 import com.danielwaiguru.presentation.R
 import com.danielwaiguru.presentation.databinding.FragmentAddInventoryBinding
+import com.danielwaiguru.presentation.utils.ImageUtils
 import com.danielwaiguru.presentation.utils.showToast
 import com.danielwaiguru.presentation.utils.snackBar
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -22,13 +24,18 @@ class AddInventoryFragment : Fragment(R.layout.fragment_add_inventory) {
     private lateinit var productUnit: String
     private lateinit var imageUrl: String
     private val imagePicker = registerForActivityResult(ActivityResultContracts.GetContent()) {
-        imageUrl = it.toString()
+        val inputStream = requireContext().contentResolver.openInputStream(it)
+        val bitmap = BitmapFactory.decodeStream(inputStream)
+        imageUrl = ImageUtils.bitMapToString(bitmap) ?: ""
         binding.productImage.setImageURI(it)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentAddInventoryBinding.bind(view)
         initUi()
+
+    }
+    fun tes () {
 
     }
 

@@ -1,11 +1,14 @@
 package com.danielwaiguru.presentation.products
 
+import android.database.Cursor
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -13,10 +16,9 @@ import com.danielwaiguru.presentation.R
 import com.danielwaiguru.presentation.adapters.ProductsAdapter
 import com.danielwaiguru.presentation.databinding.FragmentAllInventoriesBinding
 import com.danielwaiguru.presentation.utils.snackBar
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class AllInventoriesFragment : Fragment(R.layout.fragment_all_inventories) {
     private var _binding: FragmentAllInventoriesBinding? = null
