@@ -3,9 +3,12 @@ package com.danielwaiguru.data.models
 import android.graphics.Bitmap
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Entity(tableName = "entities")
+@Entity(tableName = "products")
 data class ProductEntity(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     val name: String,
     val code: String,
     val category: String,
@@ -22,5 +25,5 @@ data class ProductEntity(
     val agentPrice: String,
     @ColumnInfo(name = "wholesale_price")
     val wholesalePrice: String,
-    val image: Bitmap
+    val image: String
 )
