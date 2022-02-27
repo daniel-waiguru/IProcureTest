@@ -1,0 +1,13 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_to_inventory">Add to Inventory</string>
+    <string name="create_new">Create New</string>
+    <string name="search_hint">Search by name, manufacturer, code</string>
+    <string-array name="pager_titles">
+        <item>All</item>
+        <item>Cereal Seeds</item>
+        <item>Equipment</item>
+        <item>Minerals</item>
+    </string-array>
+</resources>

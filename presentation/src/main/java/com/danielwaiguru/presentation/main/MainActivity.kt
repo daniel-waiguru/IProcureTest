@@ -1,7 +1,8 @@
-package com.danielwaiguru.iprocuretest
+package com.danielwaiguru.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.danielwaiguru.presentation.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
