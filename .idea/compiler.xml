@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="1.7">
       <module name="IProcureTest.app" target="11" />
       <module name="IProcureTest.data" target="11" />
+      <module name="IProcureTest.presentation" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
