@@ -39,17 +39,16 @@ The app uses clean architecture with the following modules
 This is the core layer of the application. The domain layer is independent of any other layers thus ] domain models and business logic can be independent from other layers.This means that changes in other layers will have no effect on domain layer eg. screen UI (presentation layer) or changing database (data layer) will not result in any code change withing domain layer.
 Components of domain layer
 <br/>
-Models: Defines the core structure of the data that will be used within the application.
-<br/>
-Repositories: Interfaces used by the use cases. Implemented in the data layer.
+* Models: Defines the core structure of the data that will be used within the application.
+
+* Repositories: Interfaces used by the use cases. Implemented in the data layer.
 
 #### 2. Data 
 The data layer is responsibile for selecting the proper data source for the domain layer (In this case it contains only local source). It contains the implementations of the repositories declared in the domain layer.
-Repositories: Responsible for exposing data to the domain layer.
-<br/>
-Mappers: They perform data transformation between domain, dto and entity models.
-<br/>
-Sources: Responsible for deciding which data source (network or cache) will be used when fetching data.
+* Repositories: Responsible for exposing data to the domain layer.
+
+* Mappers: They perform data transformation between domain, dto and entity models.
+* Sources: Responsible for deciding which data source (network or cache) will be used when fetching data.
 
 #### 3. Presentation
 The presentation layer contains components involved in rendering information to the user. The main part of this layer are the views(Fragment, Activities Composables) and viewModels.
