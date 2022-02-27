@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".add_items.AddInventoryFragment">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@id/header_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_title" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/create_new_product"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:animationCache="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvScanDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_background"
+                android:padding="10dp"
+                android:text="@string/scan_details"
+                app:drawableStartCompat="@drawable/ic_scan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvScanDetails">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_name"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+                    android:hint="@string/product_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/product_code"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProductCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/product_code"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/product_cat"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:background="@drawable/search_background"
+                    android:entries="@array/types"
+                    android:padding="10dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/pType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/product_type"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/etProductType"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="10dp"
+                        android:autofillHints="no"
+                        android:background="@drawable/search_background"
+                        android:hint="@string/product_type"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        app:layout_constraintEnd_toStartOf="@id/spProductType"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pType" />
+
+                    <Spinner
+                        android:id="@+id/spProductType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:background="@drawable/search_background"
+                        android:entries="@array/types"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/etProductType"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/etProductType" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/manufacturer"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etManufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/manufacturer"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/distributor"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etDistributor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/distributor"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    app:dividerColor="@color/search_bg_color" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vat_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/addVat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/unit_cost"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etUnitCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/unit_cost"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/retail_price"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etRetailPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/retail_price"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/agent_price"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etAgentPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+                    android:hint="@string/agent_price"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/wholesale_price"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etWholePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/search_background"
+
+                    android:hint="@string/wholesale_price"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="12dp"
+                    app:dividerColor="@color/search_bg_color" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="12dp"
+                   android:background="@drawable/search_background"
+                   android:orientation="horizontal"
+                   >
+                   <ImageView
+                       android:layout_width="80dp"
+                       android:layout_height="80dp"
+                       android:src="@drawable/ic_image"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:text="@string/add_product_image"
+                       android:textColor="@color/primaryColor"
+                       />
+               </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal" >
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancel"
+                        app:backgroundTint="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        app:elevation="@null"
+                        app:cornerRadius="8dp"
+                        android:layout_height="60dp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primaryColor"
+                        />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        app:backgroundTint="@color/primaryColor"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        app:cornerRadius="8dp"
+                        android:textAllCaps="false"
+                        android:layout_height="60dp"
+                        android:text="@string/Save"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

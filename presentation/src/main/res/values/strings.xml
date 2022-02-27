@@ -4,10 +4,30 @@
     <string name="add_to_inventory">Add to Inventory</string>
     <string name="create_new">Create New</string>
     <string name="search_hint">Search by name, manufacturer, code</string>
+    <string name="create_new_product">Create new Product</string>
+    <string name="scan_details">Scan details</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_code">Product Code</string>
+    <string name="product_type">Product Type</string>
+    <string name="product_cat">Category</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="distributor">Distributor</string>
+    <string name="vat_16">Vat 16%</string>
+    <string name="unit_cost">Unit Cost</string>
+    <string name="retail_price">Retail Price</string>
+    <string name="agent_price">Agebt Price</string>
+    <string name="wholesale_price">Wholesale Price</string>
+    <string name="add_product_image">Add Product Image</string>
+    <string name="cancel">Cancel</string>
+    <string name="Save">Save</string>
     <string-array name="pager_titles">
         <item>All</item>
         <item>Cereal Seeds</item>
         <item>Equipment</item>
         <item>Minerals</item>
+    </string-array>
+    <string-array name="types">
+        <item>Kgs</item>
+        <item>Grams</item>
     </string-array>
 </resources>

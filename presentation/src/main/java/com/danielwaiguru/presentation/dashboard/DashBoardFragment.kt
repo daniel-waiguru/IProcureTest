@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.danielwaiguru.presentation.R
 import com.danielwaiguru.presentation.adapters.DashBoardPagerAdapter
 import com.danielwaiguru.presentation.databinding.FragmentDashBoardBinding
@@ -25,6 +26,15 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
     private fun initUI() {
         val adapter = createAdapter()
         setupPager2(adapter)
+        initListeners()
+    }
+
+    private fun initListeners() {
+        binding.addProduct.setOnClickListener {
+            findNavController().navigate(
+                DashBoardFragmentDirections.actionDashBoardFragmentToAddInventoryFragment()
+            )
+        }
     }
 
     private fun setupPager2(adapter: DashBoardPagerAdapter) {

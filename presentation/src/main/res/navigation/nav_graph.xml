@@ -9,5 +9,14 @@
         android:id="@+id/dashBoardFragment"
         android:name="com.danielwaiguru.presentation.dashboard.DashBoardFragment"
         android:label="fragment_dash_board"
-        tools:layout="@layout/fragment_dash_board" />
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addInventoryFragment"
+            app:destination="@id/addInventoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addInventoryFragment"
+        android:name="com.danielwaiguru.presentation.add_items.AddInventoryFragment"
+        android:label="fragment_add_inventory"
+        tools:layout="@layout/fragment_add_inventory" />
 </navigation>
