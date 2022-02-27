@@ -28,5 +28,6 @@ private val repositoryModules = module {
 }
 
 val dataModules = listOf(
-    databaseModule
+    databaseModule,
+    repositoryModules
 )

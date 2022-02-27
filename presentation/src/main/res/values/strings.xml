@@ -20,6 +20,9 @@
     <string name="add_product_image">Add Product Image</string>
     <string name="cancel">Cancel</string>
     <string name="Save">Save</string>
+    <string name="empty_field_error">Required field</string>
+    <string name="image_error_message">Product image is required</string>
+    <string name="save_success">Product added</string>
     <string-array name="pager_titles">
         <item>All</item>
         <item>Cereal Seeds</item>
@@ -29,5 +32,10 @@
     <string-array name="types">
         <item>Kgs</item>
         <item>Grams</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Cereal Seeds</item>
+        <item>Equipment</item>
+        <item>Minerals</item>
     </string-array>
 </resources>

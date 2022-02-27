@@ -110,11 +110,12 @@
                     android:textStyle="bold" />
 
                 <Spinner
+                    android:id="@+id/spCategory"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
 
+                    android:layout_height="45dp"
                     android:background="@drawable/search_background"
-                    android:entries="@array/types"
+                    android:entries="@array/categories"
                     android:padding="10dp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -314,25 +315,27 @@
                     android:layout_marginTop="12dp"
                     app:dividerColor="@color/search_bg_color" />
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="12dp"
-                   android:background="@drawable/search_background"
-                   android:orientation="horizontal"
-                   >
-                   <ImageView
-                       android:layout_width="80dp"
-                       android:layout_height="80dp"
-                       android:src="@drawable/ic_image"/>
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center"
-                       android:text="@string/add_product_image"
-                       android:textColor="@color/primaryColor"
-                       />
-               </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/imagePick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/search_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/productImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_image" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/add_product_image"
+                        android:textColor="@color/primaryColor" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

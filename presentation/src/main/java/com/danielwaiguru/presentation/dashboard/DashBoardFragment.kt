@@ -10,6 +10,7 @@ import com.danielwaiguru.presentation.R
 import com.danielwaiguru.presentation.adapters.DashBoardPagerAdapter
 import com.danielwaiguru.presentation.databinding.FragmentDashBoardBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
     private var _binding: FragmentDashBoardBinding? = null
@@ -17,6 +18,7 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
     private val titles: Array<String> by lazy {
         resources.getStringArray(R.array.pager_titles)
     }
+    private val viewModel: DashBoardViewModel by viewModel()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentDashBoardBinding.bind(view)
@@ -27,13 +29,20 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
         val adapter = createAdapter()
         setupPager2(adapter)
         initListeners()
+        observeViewState()
+    }
+
+    private fun observeViewState() {
+        viewModel.onAddInventoryClicked.observe(viewLifecycleOwner) {
+            findNavController().navigate(
+                DashBoardFragmentDirections.actionDashBoardFragmentToAddInventoryFragment()
+            )
+        }
     }
 
     private fun initListeners() {
         binding.addProduct.setOnClickListener {
-            findNavController().navigate(
-                DashBoardFragmentDirections.actionDashBoardFragmentToAddInventoryFragment()
-            )
+            viewModel.onAddClicked()
         }
     }
 
