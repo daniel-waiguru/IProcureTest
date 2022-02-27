@@ -15,7 +15,7 @@
     <string name="vat_16">Vat 16%</string>
     <string name="unit_cost">Unit Cost</string>
     <string name="retail_price">Retail Price</string>
-    <string name="agent_price">Agebt Price</string>
+    <string name="agent_price">Agent Price</string>
     <string name="wholesale_price">Wholesale Price</string>
     <string name="add_product_image">Add Product Image</string>
     <string name="cancel">Cancel</string>
