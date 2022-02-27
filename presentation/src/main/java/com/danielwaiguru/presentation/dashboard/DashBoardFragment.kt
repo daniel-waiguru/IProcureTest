@@ -23,10 +23,6 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
         resources.getStringArray(R.array.pager_titles)
     }
     private val viewModel: DashBoardViewModel by viewModel()
-    private val permissionLauncher =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
-
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentDashBoardBinding.bind(view)
@@ -34,7 +30,6 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
     }
 
     private fun initUI() {
-        permissionLauncher.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
         val adapter = createAdapter()
         setupPager2(adapter)
         initListeners()
@@ -53,16 +48,13 @@ class DashBoardFragment : Fragment(R.layout.fragment_dash_board) {
         binding.addProduct.setOnClickListener {
             viewModel.onAddClicked()
         }
-    }
-
-    private fun checkPermission() {
-        if (ContextCompat.checkSelfPermission(
-                requireContext(),
-                android.Manifest.permission.READ_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED) {
-            permissionLauncher.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+        binding.searchView.setOnClickListener {
+            findNavController().navigate(
+                DashBoardFragmentDirections.actionDashBoardFragmentToSearchFragment()
+            )
         }
     }
+
     private fun setupPager2(adapter: DashBoardPagerAdapter) {
         with(binding) {
             pager.apply {

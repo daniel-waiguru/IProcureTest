@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_dashBoardFragment_to_addInventoryFragment"
             app:destination="@id/addInventoryFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/addInventoryFragment"
         android:name="com.danielwaiguru.presentation.add_products.AddInventoryFragment"
         android:label="fragment_add_inventory"
         tools:layout="@layout/fragment_add_inventory" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.danielwaiguru.presentation.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>

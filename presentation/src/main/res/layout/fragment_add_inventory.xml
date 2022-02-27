@@ -98,7 +98,7 @@
 
                     android:hint="@string/product_code"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -246,7 +246,7 @@
 
                     android:hint="@string/unit_cost"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -266,7 +266,7 @@
 
                     android:hint="@string/retail_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -285,7 +285,7 @@
                     android:background="@drawable/search_background"
                     android:hint="@string/agent_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
@@ -305,7 +305,7 @@
 
                     android:hint="@string/wholesale_price"
                     android:imeOptions="actionNext"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp" />
 
