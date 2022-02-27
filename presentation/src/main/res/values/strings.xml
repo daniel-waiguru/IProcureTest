@@ -23,6 +23,7 @@
     <string name="empty_field_error">Required field</string>
     <string name="image_error_message">Product image is required</string>
     <string name="save_success">Product added</string>
+    <string name="no_products_found_add_some">No products found. Add some</string>
     <string-array name="pager_titles">
         <item>All</item>
         <item>Cereal Seeds</item>

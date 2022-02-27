@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/addInventoryFragment"
-        android:name="com.danielwaiguru.presentation.add_items.AddInventoryFragment"
+        android:name="com.danielwaiguru.presentation.add_products.AddInventoryFragment"
         android:label="fragment_add_inventory"
         tools:layout="@layout/fragment_add_inventory" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.danielwaiguru.presentation.add_items
+package com.danielwaiguru.presentation.add_products
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

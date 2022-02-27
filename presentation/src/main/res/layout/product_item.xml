@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/productImage"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/name"
+        tools:text="Name"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/productImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/productImage"
+        />
+    <TextView
+        android:id="@+id/manufacturer"
+        android:layout_width="0dp"
+        tools:text="Manufacturer"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/productImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        />
+    <TextView
+        android:id="@+id/unitCost"
+        android:layout_width="0dp"
+        tools:text="Unit Cost"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/productImage"
+        app:layout_constraintEnd_toStartOf="@id/distributor"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/manufacturer"
+        />
+    <TextView
+        android:id="@+id/distributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/unitCost"
+        app:layout_constraintBottom_toBottomOf="@id/unitCost"
+        tools:text="IProcure"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

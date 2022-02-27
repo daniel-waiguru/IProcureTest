@@ -21,5 +21,5 @@ fun Product.toEntity(): ProductEntity = ProductEntity(
 )
 
 fun ProductEntity.toUiModel(): ProductUiModel = ProductUiModel(
-    name, code, category, type, unit, manufacturer, distributor, image
+    id, name, code, category, type, unit, manufacturer, distributor, image
 )

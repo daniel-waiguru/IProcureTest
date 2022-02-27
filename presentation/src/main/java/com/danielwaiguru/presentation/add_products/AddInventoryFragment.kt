@@ -1,7 +1,6 @@
-package com.danielwaiguru.presentation.add_items
+package com.danielwaiguru.presentation.add_products
 
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
