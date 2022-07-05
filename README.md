@@ -1,5 +1,5 @@
 # IProcureTest
-Mobile App that that enables users to manager product listing (in and e-commerce environment) IProcure Ltd Android Engineer role  interview solution
+Mobile App that that enables users to manager product listing (in and e-commerce environment) IProcure Ltd Senior Android Engineer role  interview solution
 #### Tech-stack
 * Tech-stack
     * [Kotlin](https://kotlinlang.org/) - a cross-platform, statically typed, general-purpose programming language with type inference.
