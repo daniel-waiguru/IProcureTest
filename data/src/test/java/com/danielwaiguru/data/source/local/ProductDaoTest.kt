@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
-@Config(manifest = Config.NONE, sdk = [29])
+@Config(manifest = Config.NONE)
 class ProductDaoTest: BaseTest() {
     @Test
     fun `test inserting and retrieving products`() = runBlockingTest {
