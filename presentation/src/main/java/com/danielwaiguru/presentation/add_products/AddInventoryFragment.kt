@@ -24,7 +24,9 @@ class AddInventoryFragment : Fragment(R.layout.fragment_add_inventory) {
     private lateinit var productUnit: String
     private lateinit var imageUrl: String
     private val imagePicker = registerForActivityResult(ActivityResultContracts.GetContent()) {
-        val inputStream = requireContext().contentResolver.openInputStream(it)
+        if (it == null) return@registerForActivityResult
+        val inputStream = requireContext()
+            .contentResolver.openInputStream(it) ?: return@registerForActivityResult
         val bitmap = BitmapFactory.decodeStream(inputStream)
         imageUrl = ImageUtils.bitMapToString(bitmap) ?: ""
         binding.productImage.setImageURI(it)
