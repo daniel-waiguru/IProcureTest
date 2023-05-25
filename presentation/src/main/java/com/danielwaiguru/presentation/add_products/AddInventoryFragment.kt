@@ -35,9 +35,6 @@ class AddInventoryFragment : Fragment(R.layout.fragment_add_inventory) {
         initUi()
 
     }
-    fun tes () {
-
-    }
 
     private fun initUi() {
         initListeners()
