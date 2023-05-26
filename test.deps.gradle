@@ -32,7 +32,7 @@ dependencies {
     androidTestImplementation "androidx.test:rules:1.4.0"
     androidTestImplementation "com.agoda.kakao:kakao:2.3.4"
     androidTestImplementation "io.mockk:mockk-android:1.12.0"
-    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
     androidTestImplementation "io.insert-koin:koin-test:3.1.5"
 
 }
