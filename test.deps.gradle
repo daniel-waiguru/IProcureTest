@@ -13,7 +13,7 @@ dependencies {
     testImplementation "io.insert-koin:koin-test-junit4:3.1.2"
     testImplementation "io.mockk:mockk:1.12.0"
     testImplementation "androidx.room:room-testing:2.4.2"
-    testImplementation "androidx.test:rules:1.4.0"
+    testImplementation "androidx.test:rules:1.5.0"
     testImplementation "androidx.test:runner:1.4.0"
     testImplementation "com.jraska.livedata:testing-ktx:1.2.0"
     testImplementation "io.mockk:mockk-android:1.12.0"
@@ -29,7 +29,7 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:2.4.1"
     androidTestImplementation "android.arch.persistence.room:testing:1.1.1"
     androidTestImplementation "androidx.test:runner:1.4.0"
-    androidTestImplementation "androidx.test:rules:1.4.0"
+    androidTestImplementation "androidx.test:rules:1.5.0"
     androidTestImplementation "com.agoda.kakao:kakao:2.3.4"
     androidTestImplementation "io.mockk:mockk-android:1.12.0"
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
