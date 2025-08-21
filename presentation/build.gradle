@@ -50,7 +50,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     implementation "androidx.navigation:navigation-fragment-ktx:2.4.1"
-    implementation "androidx.navigation:navigation-ui-ktx:2.4.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.9.3"
     implementation "androidx.navigation:navigation-runtime-ktx:2.5.3"
     implementation "androidx.fragment:fragment-ktx:1.4.1"
 
